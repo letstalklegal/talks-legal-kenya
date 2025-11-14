@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Youtube, Mail } from "lucide-react";
-import karimiHero from "@/assets/karimi-hero.jpg";
+import karimiHero from "@/assets/karimi-hero-new.jpg";
 
 const Hero = () => {
   return (
@@ -10,10 +10,11 @@ const Hero = () => {
         <img
           src={karimiHero}
           alt="Ashley Karimi Chege - Employment Lawyer"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/40" />
+        {/* Gradient overlay for text readability and blending */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/75 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-primary/50" />
       </div>
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
