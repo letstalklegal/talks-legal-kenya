@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/lets-talk-legal-logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +23,17 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="text-2xl font-serif font-bold text-primary group-hover:text-accent transition-colors">
-              Let's Talk Legal
+          <Link to="/" className="flex items-center space-x-3 group">
+            <img 
+              src={logo} 
+              alt="Let's Talk Legal Logo" 
+              className="h-12 w-12 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-105"
+            />
+            <div className="flex flex-col leading-tight">
+              <span className="text-xl md:text-2xl font-serif font-bold text-primary group-hover:text-accent transition-colors">
+                <span className="font-normal">Let's Talk </span>
+                <span className="font-bold text-accent">Legal</span>
+              </span>
             </div>
           </Link>
 
