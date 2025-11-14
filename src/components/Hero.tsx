@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Youtube, Mail } from "lucide-react";
-import karimiHero from "@/assets/karimi-hero-new.jpg";
+import ashHero from "@/assets/ashleywan.png";
 
 const Hero = () => {
   return (
@@ -8,13 +8,26 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={karimiHero}
-          alt="Ashley Karimi Chege - Employment Lawyer"
-          className="w-full h-full object-cover object-center"
+          src={ashHero}
+          alt="Let's Talk Legal - Hero"
+          className="w-full h-full object-cover object-right-top filter contrast-115 brightness-105 saturate-105"
+          style={{ objectPosition: 'right center' }}
         />
-        {/* Gradient overlay for text readability and blending */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/75 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-primary/50" />
+        {/* Radial highlight to emphasize host area without affecting text readability */}
+        <div
+          className="pointer-events-none absolute"
+          style={{
+            right: 0,
+            top: '15%',
+            width: '55%',
+            height: '70%',
+            background: 'radial-gradient(ellipse at right center, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 30%, rgba(0,0,0,0.08) 70%, rgba(0,0,0,0.28) 100%)',
+            mixBlendMode: 'normal',
+          }}
+        />
+        {/* Gradient overlay for text readability and blending (lightened for clarity) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/45 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-primary/30" />
       </div>
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
