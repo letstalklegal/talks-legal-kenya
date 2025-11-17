@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Youtube, Mail } from "lucide-react";
-import ashHero from "@/assets/ashleywan.png";
+import ashHero from "@/assets/karimi-hero-latest.png";
 
 const Hero = () => {
   return (
@@ -9,9 +9,11 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={ashHero}
-          alt="Let's Talk Legal - Hero"
-          className="w-full h-full object-cover object-right-top filter contrast-110 brightness-100 saturate-110"
+          alt="Karimi Chege - Legal Advocate and Host of Let's Talk Legal"
+          className="w-full h-full object-cover object-right-top"
           style={{ objectPosition: 'right center' }}
+          loading="eager"
+          fetchPriority="high"
         />
         {/* Subtle radial highlight on host - minimal interference */}
         <div
