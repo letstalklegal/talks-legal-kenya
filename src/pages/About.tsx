@@ -1,21 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Briefcase, Scale, Heart, Youtube } from "lucide-react";
+import { Briefcase, Users, GraduationCap, Youtube, Linkedin, Instagram, Facebook } from "lucide-react";
 import karimiAbout from "@/assets/karimi-about.jpg";
 import podcastStudio from "@/assets/podcast-studio.jpg";
 
 const About = () => {
   return (
     <div className="min-h-screen pt-20">
+      {/* SEO Meta - Managed in index.html */}
+      
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-primary via-primary/95 to-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold">
+            <h1 className="text-5xl md:text-6xl font-serif font-bold leading-tight">
               Meet <span className="text-accent">Karimi Chege</span>
             </h1>
-            <p className="text-xl md:text-2xl leading-relaxed opacity-90">
-              Employment Lawyer, Content Creator, and Voice for Workplace Justice
+            <p className="text-xl md:text-2xl leading-relaxed opacity-90 max-w-3xl mx-auto">
+              Advocate of the High Court | Employment Law Specialist | Legal Educator
+            </p>
+            <p className="text-lg leading-relaxed opacity-80 max-w-2xl mx-auto">
+              Making Kenyan employment law accessible, practical, and empowering for all
             </p>
           </div>
         </div>
@@ -24,32 +29,91 @@ const About = () => {
       {/* Mission Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
+          <div className="grid lg:grid-cols-3 gap-12 items-start">
+            {/* Main Mission Content */}
+            <div className="lg:col-span-2 space-y-6 animate-fade-in">
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary">
-                The Mission
+                About Karimi
               </h2>
               <div className="h-1 w-24 bg-accent rounded-full" />
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                "Let's Talk Legal with Karimi Chege" exists to <strong className="text-primary">empower everyday Kenyans</strong> with the knowledge to navigate their workplaces confidently.
+              
+              {/* Mission Paragraph - 140-180 words */}
+              <p className="text-lg text-foreground leading-relaxed">
+                Ashley Karimi Chege is an Advocate of the High Court of Kenya and Associate at Maina & Onsare Partners Advocates LLP, where she has practiced since May 2022. She holds an LLB (First Class Honours) from Riara University and completed her Advocates Training Programme at the Kenya School of Law. As a certified mediator with the Dialogue & Dispute Resolution Institute, Karimi brings both litigation expertise and a resolution-first approach to workplace disputes.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                From unfair dismissals to contract disputes, Karimi makes complex legal principles simple, relevant, and actionable.
+              
+              <p className="text-lg text-foreground leading-relaxed">
+                Through <em>Let's Talk Legal</em>, Karimi translates complex employment law into clear, actionable guidance for three audiences: employees seeking to understand their rights, employers building fair workplace cultures, and law learners navigating their early careers. From contract clauses and probation periods to maternity rights and unfair termination, she makes Kenyan employment law accessible through short episodes, written guides, and community-driven legal clinics.
               </p>
-              <div className="bg-secondary border-l-4 border-accent p-6 rounded-lg">
-                <p className="text-lg italic text-primary font-serif">
-                  Inspired by Proverbs 18:15, this platform stands on the belief that <strong>knowledge is both power and protection.</strong>
+
+              {/* Pull Quote */}
+              <div className="bg-secondary border-l-4 border-accent p-8 rounded-lg my-8 shadow-sm">
+                <p className="text-xl italic text-primary font-serif leading-relaxed">
+                  "At Let's Talk Legal, we make employment law practical and personal—because knowledge is both power and protection, and you deserve to know."
+                </p>
+                <p className="text-sm text-muted-foreground mt-4">
+                  — Proverbs 18:15: "The heart of the discerning acquires knowledge, and the ear of the wise seeks it out."
+                </p>
+              </div>
+
+              <div className="bg-accent/10 border border-accent/30 p-6 rounded-xl">
+                <p className="text-sm text-foreground font-medium">
+                  <strong>Educational Disclaimer:</strong> Content on this site is for educational purposes only and does not constitute legal advice. For case-specific guidance or representation, please book a consultation.
                 </p>
               </div>
             </div>
-            <div className="relative animate-scale-in">
-              <div className="absolute -inset-4 bg-gradient-to-r from-accent to-primary/20 rounded-2xl blur-xl opacity-20" />
-              <img
-                src={karimiAbout}
-                alt="Karimi Chege in professional setting"
-                className="relative rounded-2xl shadow-2xl border-4 border-accent w-full"
-              />
-            </div>
+
+            {/* Author Sidebar - Quick Facts */}
+            <aside className="lg:sticky lg:top-24 space-y-6" aria-label="Quick facts about Karimi Chege">
+              <Card className="border-2 border-accent/20 shadow-lg">
+                <CardContent className="p-6 space-y-4">
+                  <h3 className="text-xl font-serif font-bold text-primary border-b border-border pb-2">
+                    Quick Facts
+                  </h3>
+                  
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <p className="font-semibold text-foreground">Education</p>
+                      <p className="text-muted-foreground">LLB (First Class Honours)</p>
+                      <p className="text-muted-foreground text-xs">Riara University</p>
+                    </div>
+                    
+                    <div className="border-t border-border pt-3">
+                      <p className="font-semibold text-foreground">Professional Training</p>
+                      <p className="text-muted-foreground">Advocates Training Programme</p>
+                      <p className="text-muted-foreground text-xs">Kenya School of Law</p>
+                    </div>
+                    
+                    <div className="border-t border-border pt-3">
+                      <p className="font-semibold text-foreground">Current Role</p>
+                      <p className="text-muted-foreground">Associate (since 19 May 2022)</p>
+                      <p className="text-muted-foreground text-xs">Maina & Onsare Partners Advocates LLP</p>
+                    </div>
+                    
+                    <div className="border-t border-border pt-3">
+                      <p className="font-semibold text-foreground">Certifications</p>
+                      <p className="text-muted-foreground">Certified Mediator</p>
+                      <p className="text-muted-foreground text-xs">Dialogue & Dispute Resolution Institute</p>
+                    </div>
+                    
+                    <div className="border-t border-border pt-3">
+                      <p className="font-semibold text-foreground">Specialization</p>
+                      <p className="text-muted-foreground">Employment & Labour Law</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="relative">
+                <div className="absolute -inset-2 bg-gradient-to-br from-accent/20 to-primary/10 rounded-2xl blur-lg" />
+                <img
+                  src={karimiAbout}
+                  alt="Professional portrait of Karimi Chege, Advocate of the High Court"
+                  className="relative rounded-xl shadow-xl w-full"
+                  loading="lazy"
+                />
+              </div>
+            </aside>
           </div>
         </div>
       </section>
