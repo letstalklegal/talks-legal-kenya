@@ -43,33 +43,51 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-sans leading-relaxed font-light max-w-2xl">
-              Empowering Kenyans Through Employment Law Education
+              Empowering Kenyans through clear, practical employment law education — for employees, employers and law learners.
             </p>
             
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 md:p-8 rounded-2xl shadow-lg max-w-2xl">
               <p className="text-base md:text-lg italic text-white font-serif leading-relaxed">
-                "The heart of the discerning acquires knowledge, and the ear of the wise seeks it out."
+                "At Let's Talk Legal, we make employment law practical and personal—because you deserve to know."
               </p>
-              <p className="text-sm text-accent font-sans font-semibold mt-3">— Proverbs 18:15</p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button 
-                size="lg" 
+                size="lg"
+                asChild
                 className="bg-accent hover:bg-accent/90 text-primary font-sans font-semibold text-base rounded-full px-8 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group"
               >
-                <Youtube className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Watch on YouTube
+                <a href="https://www.youtube.com/@LetsTalkLegal" target="_blank" rel="noopener noreferrer">
+                  <Youtube className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  Watch on YouTube
+                </a>
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
+                asChild
                 className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary font-sans font-semibold text-base rounded-full px-8 shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group"
               >
-                <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
-                Join the Community
+                <a href="/contact">
+                  <Mail className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+                  Join the Community
+                </a>
+              </Button>
+              <Button 
+                size="lg"
+                asChild
+                className="bg-primary hover:bg-primary/90 text-white font-sans font-semibold text-base rounded-full px-8 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+              >
+                <a href="/contact">
+                  Book a Consultation
+                </a>
               </Button>
             </div>
+            
+            <p className="text-sm text-white/70 font-sans mt-4 max-w-2xl">
+              Karimi Chege — Advocate of the High Court. Associate, Maina & Onsare Partners Advocates LLP (since 19 May 2022).
+            </p>
           </div>
         </div>
       </div>
