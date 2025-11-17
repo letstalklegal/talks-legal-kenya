@@ -10,24 +10,24 @@ const Hero = () => {
         <img
           src={ashHero}
           alt="Let's Talk Legal - Hero"
-          className="w-full h-full object-cover object-right-top filter contrast-115 brightness-105 saturate-105"
+          className="w-full h-full object-cover object-right-top filter contrast-110 brightness-100 saturate-110"
           style={{ objectPosition: 'right center' }}
         />
-        {/* Radial highlight to emphasize host area without affecting text readability */}
+        {/* Subtle radial highlight on host - minimal interference */}
         <div
           className="pointer-events-none absolute"
           style={{
             right: 0,
             top: '15%',
-            width: '55%',
+            width: '50%',
             height: '70%',
-            background: 'radial-gradient(ellipse at right center, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 30%, rgba(0,0,0,0.08) 70%, rgba(0,0,0,0.28) 100%)',
+            background: 'radial-gradient(ellipse at right center, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 30%, transparent 60%)',
             mixBlendMode: 'normal',
           }}
         />
-        {/* Gradient overlay for text readability and blending (lightened for clarity) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/45 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-primary/30" />
+        {/* Reduced gradient overlay - only on left side for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-transparent to-primary/20" />
       </div>
       
       <div className="container mx-auto px-6 md:px-12 relative z-10">
